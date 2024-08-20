@@ -8,8 +8,8 @@ public class Main {
         ProblemClass practice = new ProblemClass();
 
         ProblemCLass0 ptc0 = new ProblemCLass0();
-
-        ptc0.CheckForPrime(2);
+        int [] array={2,3,4,56,12};
+        ptc0.reverseArray(array);
 
 
     }

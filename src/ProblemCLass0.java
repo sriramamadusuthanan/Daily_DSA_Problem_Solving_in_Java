@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ProblemCLass0 {
 
@@ -60,5 +62,142 @@ public class ProblemCLass0 {
 
 
     }
+
+    //20/08/24
+    //Check 3digit num : Armstrong or not
+
+    public boolean ArmstrongNo(int number)
+    {
+        int orignal=number;
+        int sum=0;
+        while (number > 0)
+         {
+
+            int lastdigit=number%10;
+
+            //int cube=lastdigit* lastdigit *lastdigit;
+
+            int cube= (int)Math.pow(lastdigit,3);
+            sum=sum+cube;
+            number=number/10;
+        }
+        
+        if(orignal==sum)
+        {
+
+            System.out.println("Armstrong");
+            return true;
+        }
+        else
+
+            return false;
+    }
+
+    //Armstrong number for a range
+    public void RangArmstrongNoCheck()
+    {
+        for(int i=100; i<1000;i++)
+        {
+            if(ArmstrongNo(i))
+            {
+                System.out.println(i);
+            }
+        }
+    }
+
+    //array
+    //syntax
+    //datatype[] arrayname= new datatype[size]
+    //datatype[] name={value,value,value}
+
+    public void arrayMethod()
+    {
+        int[] arrayName;   //declaration -arrayName is getting defined in the stack
+
+        arrayName = new int[5];  // Initialization - memory for 5 integers is allocated on the heap
+
+        //2d Array
+        int[][] Array2D=new int[3][3];  //row range is need and col is optional
+
+        Scanner sc = new Scanner(System.in);
+
+        for (int i = 0; i < Array2D.length; i++) {
+            for (int j = 0; j < Array2D[i].length; j++) {
+                Array2D[i][j]= sc.nextInt();
+            }
+            System.out.println();
+        }
+        //to print
+
+        for(int[] row:Array2D)
+        {
+            System.out.println(Arrays.toString(row));
+        }
+
+        //ArrayList
+        //syntax
+        //ArrayList<Datatype> Name_ = new ArrayList<>();
+        //we shouldn't add primitives like int ...we should add wrapped Class like Integer
+        ArrayList<Integer> list = new ArrayList<>(3);
+        list.add(1);
+        list.add(3);
+        list.add(56);
+        list.add(56);
+        list.add(58);
+
+        System.out.println(list.get(0));
+        System.out.println(list.contains(56));
+        System.out.println(list);
+
+
+    }
+
+    //swap element in array
+    public void swapElement(int[] arr, int index1, int index2)
+    {
+        System.out.println(Arrays.toString(arr));
+        int temp=arr[index1];
+        arr[index1]=arr[index2];
+        arr[index2]=temp;
+
+        System.out.println(Arrays.toString(arr));
+    }
+
+    //max in a array
+    public void maxinArray(int[] arr)
+    {
+        if(arr==null || arr.length==0)
+        {
+            System.out.println("Array is emplty");
+            return;
+        }
+        int max=arr[0];
+        for (int i = 0; i < arr.length; i++)
+        {
+            if(arr[i]>max)
+            {
+                max =arr[i];
+            }
+        }
+        System.out.println(max);
+    }
+
+    //reverse a Array
+    public void reverseArray(int[] arr)
+    {
+        int first=0;
+        int last=arr.length-1;
+       // int middle=last/2;
+        while(first<last)
+        {
+            int temp=arr[first];
+            arr[first]=arr[last];
+            arr[last]=temp;
+            first++;
+            last--;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
 
 }
