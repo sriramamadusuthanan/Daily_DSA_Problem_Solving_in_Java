@@ -1,9 +1,14 @@
+import java.lang.reflect.Array;
 import java.time.LocalTime;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class ProblemClass {
+
+
+
 
     public void rever(int n)
     {
