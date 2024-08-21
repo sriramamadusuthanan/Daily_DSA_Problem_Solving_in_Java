@@ -5,11 +5,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ProblemClass practice = new ProblemClass();
+        ProblemClass1 practice = new ProblemClass1();
 
-        ProblemCLass0 ptc0 = new ProblemCLass0();
-        int [] array={2,3,4,56,12};
-        ptc0.reverseArray(array);
+
+        int [][] array= {
+                {1,2},
+                {2,3}
+        };
+
+        practice.maximumWealth(array);
 
 
     }

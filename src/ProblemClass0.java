@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ProblemCLass0 {
+public class ProblemClass0 {
 
     //16/8/24
     //1.input is a uppercase or lowercase
@@ -197,6 +197,78 @@ public class ProblemCLass0 {
             last--;
         }
         System.out.println(Arrays.toString(arr));
+    }
+
+    //21/08/24
+    //LinearSearch
+
+    public void linearSearch(int[] arr,int target)
+    {
+        if(arr.length==0 )
+        {
+            System.out.println("Empty Array");
+            return;
+        }
+
+        for (int index = 0; index < arr.length; index++)
+        {
+            if(arr[index]==target) //arr[index].equal(target)
+            {
+                System.out.println("Element "+target+" is found at "+index+" position of the array");
+                return;
+
+            }
+        }
+
+        System.out.println("Element not found");
+
+    }
+
+    //for string :no case sensitivity :if it's for a single string use charAt(i)
+    public void linearSearchForString(String[] arr,String target)
+    {
+        if(arr.length==0 )
+        {
+            System.out.println("Empty Array");
+            return;
+        }
+
+        for (int index = 0; index < arr.length; index++)
+        {
+            if(arr[index].equalsIgnoreCase(target)) //arr[index].equal(target)
+            {
+                System.out.println("Element "+target+" is found at "+index+" position of the array");
+                return;
+
+            }
+        }
+
+        System.out.println("Element not found");
+
+    }
+
+    //linear search in 2D array
+    public void searchIn2DArray(int[][] array,int target)
+    {
+        if(array.length==0)
+        {
+            System.out.println("Empty Array");
+            return;
+        }
+
+        for (int row = 0; row < array.length; row++)
+        {
+            for (int col = 0; col < array[row].length; col++)
+            {
+
+                if(array[row][col]==target)
+                {
+                    System.out.println("Element " +target+ " is present at "+row+" row's "+col+" col int the array");
+                    return;
+                }
+            }
+        }
+        System.out.println("Element "+target+ " Not found in the array");
     }
 
 
