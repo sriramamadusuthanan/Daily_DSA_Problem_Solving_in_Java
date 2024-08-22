@@ -9,8 +9,8 @@ public class Main {
 
 
         P_conditionals_loops methos= new P_conditionals_loops();
-        float ans=methos.areaOfCircle(235.45f);
-        System.out.println(ans);
+
+        methos.sumAllNum();
 
 
     }
