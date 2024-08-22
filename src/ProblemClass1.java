@@ -55,4 +55,101 @@ public class ProblemClass1 {
 
         return max;
     }
+
+    //22/08/24
+    //Binary Search
+    public int binarySearch(int[] array, int target)
+    {
+       int start=0;
+       int last=array.length-1;
+
+
+       while(start<=last)
+       {
+           int mid=(start+last)/2;
+           if(target<array[mid])
+           {
+
+               last=mid;
+           } else if (target>array[mid]) {
+               start=mid;
+
+           }
+           else
+           {
+               System.out.println(target);
+               return target;
+
+           }
+
+       }
+        System.out.println("element not found");
+    return -1;
+
+    }
+
+    //check sorted in ascending  or descending
+    public void checkArraySortDirection(int[] array)
+    {
+        int length=array.length-1;
+        if(array[0]<array[length])
+        {
+            System.out.println("ascending order sorted");
+        }else
+            System.out.println("descending order sorted");
+    }
+
+    //order-agnostic binary search
+    public int agnosticBinarySearch(int[] array,int target)
+    {
+
+        if(array[0]<array[array.length-1])
+        {
+            int start=0;
+            int end=array.length-1;
+
+            while (start<=end)
+            {
+                int mid = start + (end - start) / 2;
+                if(target>array[mid])
+                {
+                    start=mid-1;
+                } else if (target<array[mid])
+                {
+                    end=mid;
+                }
+                else
+                {
+                    System.out.println(target+ " element found at "+mid);
+                    return target;
+                }
+            }
+
+            return -1;
+        }else
+        {
+            int start=0;
+            int end=array.length-1;
+
+            while(start<=end)
+            {
+                int mid = start + (end - start) / 2;
+                //[9,8,7,6,5,4]
+                if(target>array[mid])
+                {
+                    end=mid;
+                } else if (target<array[mid])
+                {
+                    start=mid+1;
+                }else
+                {
+                    System.out.println(target+ " element found at "+mid );
+                    return target;
+                }
+            }
+
+            return -1;
+        }
+    }
+
 }

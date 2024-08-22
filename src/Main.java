@@ -8,12 +8,9 @@ public class Main {
         ProblemClass1 practice = new ProblemClass1();
 
 
-        int [][] array= {
-                {1,2},
-                {2,3}
-        };
-
-        practice.maximumWealth(array);
+        P_conditionals_loops methos= new P_conditionals_loops();
+        float ans=methos.areaOfCircle(235.45f);
+        System.out.println(ans);
 
 
     }
