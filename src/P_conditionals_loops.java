@@ -130,19 +130,55 @@ public class P_conditionals_loops {
     public void sumAllNum()
     {
         int sum=0;
-        System.out.println("Enter number to sum and press '0' to exit");
-        Scanner sc = new Scanner(System.in);
-        int num= sc.nextInt();
-        while (num>0)
-        {
 
-            sum=sum+num;
+
+        Scanner sc = new Scanner(System.in);
+
+        while (true)
+        {
+            System.out.println("Enter number to sum and press '0' to exit");
+            int num =sc.nextInt();
+            if(num>0)
+            {
+                sum=sum+num;
+            }
+            if(num==0)
+            {
+                break;
+            }
+
 
         }
         System.out.println(sum);
+
     }
 
+//25.Take integer inputs till the
+// user enters 0 and print the largest number from all.
+public void largestOfAllNum()
+{
+    int largest=Integer.MIN_VALUE;
 
 
+    Scanner sc = new Scanner(System.in);
+
+    while (true)
+    {
+        System.out.println("Enter number to check largest and press '0' to exit");
+        int num =sc.nextInt();
+        if(num>largest)
+        {
+            largest=num;
+        }
+        if(num==0)
+        {
+            break;
+        }
+
+
+    }
+    System.out.println(largest);
+
+}
 
 }
