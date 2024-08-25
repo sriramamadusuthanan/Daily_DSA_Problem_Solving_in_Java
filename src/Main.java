@@ -10,7 +10,7 @@ public class Main {
 
         P_conditionals_loops methos= new P_conditionals_loops();
 
-        methos.largestOfAllNum();
+        methos.sumOfGivenNo();
 
 
     }
