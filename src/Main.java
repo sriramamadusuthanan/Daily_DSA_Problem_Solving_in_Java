@@ -5,12 +5,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ProblemClass1 practice = new ProblemClass1();
 
+        PatternPrinting pattern= new PatternPrinting();
+        pattern.pattern3(3);
 
-        P_conditionals_loops methos= new P_conditionals_loops();
-
-        methos.sumOfGivenNo();
+//        P_Array arraysol= new P_Array();
+//
+//        int[] array={8,1,2,2,3};
+//        arraysol.smallerNumbersThanCurrent(array);
 
 
     }
