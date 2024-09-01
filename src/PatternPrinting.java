@@ -114,4 +114,104 @@ public class PatternPrinting {
             System.out.println();
         }
     }
+
+//    #DAY5
+//    Problem statement
+//    Send feedback
+//    Sam is planting trees on the upper half region (separated by the left diagonal) of the square shared field.
+//    For every value of ‘N’, print the field if the trees are represented by ‘*’.
+//    Example:
+//    Input: ‘N’ = 3
+//
+//    Output:
+//            * * *
+//            * *
+//            *
+    public void pattern4(int n)
+    {
+
+        for(int i = n; i>0;i--)
+        {
+            for (int j=1;j<=i;j++)
+            {
+                System.out.print("*"+" ");
+            }
+            System.out.println();
+         }
+    }
+
+//    #DAY6
+//    Problem statement
+//    Send feedback
+//    Aryan and his friends are very fond of the pattern. For a given integer ‘N’, they want to make the Reverse N-Number Triangle.
+//    Example:
+//    Input: ‘N’ = 3
+//
+//    Output:
+//
+//            1 2 3
+//            1 2
+//            1
+
+    public void pattern5(int n)
+    {
+        for(int i=n;i>0;i--)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+
+//    #DAY7
+//    Problem statement
+//    Send feedback
+//    Ninja was very fond of patterns. For a given integer ‘N’, he wants to make the N-Star Triangle.
+//    Example:
+//    Input: ‘N’ = 3
+//
+//    Output:
+//
+//             *
+//            ***
+//           *****
+
+    public void pattern6(int n)
+    {
+        int count=0;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=n-i-1;j>=1;j--)
+            {
+                System.out.print(" ");
+            }
+            for(int k=0;k<=i+count;k++)
+            {
+                System.out.print("*");
+
+            }
+
+            System.out.println();
+            count++;
+        }
+    }
+
+    //day8
+    public void pattern7(int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=n-i-1;j>0;j--)
+            {
+                System.out.print(" ");
+            }
+            for(int k=0;k<=i;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println( );
+        }
+    }
 }

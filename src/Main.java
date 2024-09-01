@@ -7,12 +7,14 @@ public class Main {
 
 
         PatternPrinting pattern= new PatternPrinting();
-        pattern.pattern3(3);
+        pattern.pattern7(3);
 
 //        P_Array arraysol= new P_Array();
 //
-//        int[] array={8,1,2,2,3};
-//        arraysol.smallerNumbersThanCurrent(array);
+////        int[] index={0,1,2,2,1};
+//        int[] num={1,2,3,4,1,2,1};
+//        //op [1,2,3,4,1]
+//        arraysol.removeDuplicates(num);
 
 
     }

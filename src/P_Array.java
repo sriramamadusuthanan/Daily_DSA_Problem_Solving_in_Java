@@ -13,7 +13,7 @@ public class P_Array {
 //    Number of Good Pairs
 //    How Many Numbers Are Smaller Than the Current Number
 //    Create Target Array in the Given Order
-//    Check if the Sentence Is Pangram
+//    e Sentence Is PangrCheck if tham
 //    Count Items Matching a Rule
 //    Find the Highest Altitude
 //    Flipping an Image
@@ -183,10 +183,66 @@ public class P_Array {
         System.out.println(Arrays.toString(ans));
         return ans;
     }
+    // Remove Duplicates from Sorted Array
+//    Input: nums = [1,1,2]
+//    Output: 2, nums = [1,2,_]
+    public int removeDuplicates(int[] nums) {
+
+
+        int [] ans=new int[nums.length] ;
+        int count=1;
+        nums.toString();
+        for(int i=0;i<nums.length;i++)
+        {
+            for(int j=i+1;j<nums.length;j++)
+            {
+                if(nums[i]==nums[j])
+                {
+                    nums[j]= 0;
+                   // nums[j] = removeElementUsingList(nums, j);
+                    count++;
+
+                }
+                ans[i]=nums[i];
+            }
+
+        }
+        Arrays.sort(nums);
+
+        System.out.println(Arrays.toString(ans));
+        return count;
+
+    }
 
     //    Create Target Array in the Given Order
-//    public int[] createTargetArray(int[] nums, int[] index)
-//    {
+
+//    Example 1:
 //
-//    }
+//    Input: nums = [0,1,2,3,4], index = [0,1,2,2,1]
+//    Output: [0,4,1,3,2]
+//    Explanation:
+//    nums       index     target
+//0            0        [0]
+//        1            1        [0,1]
+//        2            2        [0,1,2]
+//        3            2        [0,1,3,2]
+//        4            1        [0,4,1,3,2]
+
+    public int[] createTargetArray(int[] nums, int[] index)
+    {
+        int[] ans=new int[index.length];
+
+        for(int i=0;i<index.length;i++)
+        {
+            ans[i]=nums[index[i]];
+
+            if(index[i]==index[i+1])
+            {
+
+            }
+
+        }
+        System.out.println(Arrays.toString(ans));
+        return ans;
+    }
 }
