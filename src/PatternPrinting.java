@@ -214,4 +214,75 @@ public class PatternPrinting {
             System.out.println( );
         }
     }
+    //day9
+    public void pattern8(int n)
+    {
+        int count=1;
+        for(int i=0; i<n; i++)
+        {
+            //space
+            for(int j=n-i;j>0;j--)
+            {
+                System.out.print(" ");
+            }
+            //star
+            for(int k=0;k<i+count;k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println( );
+            count++;
+        }
+        count=1;
+        for(int i=1; i<n; i++)
+        {
+            //space
+            for(int j=1;j<=i+1;j++)
+            {
+                System.out.print(" ");
+            }
+            //star
+            for(int k=(2*n)-(2*i+1);k>0;k--)
+            {
+                System.out.print("*");
+            }
+            System.out.println( );
+            count++;
+        }
+
+
+
+    }
+
+    //Day 10
+    public void pattern9(int n)
+    {
+        for(int i=1;i<n;i++)
+        {
+           for(int j=n-i;j>0;j--)
+           {
+               System.out.print("&");
+           }
+
+           if(i==1)
+           {
+               System.out.print("*");
+           }
+           if(i==n-1)
+            {
+                int last=2*n-1;
+                for(int k=0;k<last;k++)
+                {
+                    System.out.print("*");
+                }
+
+            }
+           if(i>1 && i<n-1)
+           {
+
+           }
+
+            System.out.println();
+        }
+    }
 }

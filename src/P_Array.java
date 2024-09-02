@@ -186,32 +186,57 @@ public class P_Array {
     // Remove Duplicates from Sorted Array
 //    Input: nums = [1,1,2]
 //    Output: 2, nums = [1,2,_]
-    public int removeDuplicates(int[] nums) {
+    public int[] removeDuplicates(int[] nums) {
 
 
-        int [] ans=new int[nums.length] ;
-        int count=1;
-        nums.toString();
-        for(int i=0;i<nums.length;i++)
-        {
-            for(int j=i+1;j<nums.length;j++)
-            {
-                if(nums[i]==nums[j])
-                {
-                    nums[j]= 0;
-                   // nums[j] = removeElementUsingList(nums, j);
-                    count++;
-
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    nums[j] = Integer.MAX_VALUE;
                 }
-                ans[i]=nums[i];
             }
 
+
         }
-        Arrays.sort(nums);
 
+        int[] ans = null;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == Integer.MAX_VALUE) {
+                ans = Arrays.copyOfRange(nums, 0, i);
+                break;
+            }
+        }
         System.out.println(Arrays.toString(ans));
-        return count;
+        return ans;
 
+    }
+
+    //    Plus One
+    public int[] plusOne(int[] digits)
+    {
+        int num=0;
+
+        for(int i=0;i<digits.length;i++)
+        {
+
+                int dig=digits[i];
+                num=num*10+dig;
+
+        }
+
+        int newNum=num+1;
+
+        String ansString=Integer.toString(newNum);
+
+        int[] ans = new int[ansString.length()];
+
+
+        for (int i=0;i<ansString.length();i++)
+        {
+            ans[i]= ansString.charAt(i)-'0';
+        }
+        System.out.println(Arrays.toString(ans));
+        return ans;
     }
 
     //    Create Target Array in the Given Order
