@@ -7,7 +7,7 @@ public class Main {
 
 
         PatternPrinting pattern= new PatternPrinting();
-        pattern.pattern9(5);
+        pattern.pattern12(5);
 
 //        P_Array arraysol= new P_Array();
 //

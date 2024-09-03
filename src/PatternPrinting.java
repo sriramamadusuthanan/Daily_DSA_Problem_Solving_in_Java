@@ -257,11 +257,12 @@ public class PatternPrinting {
     //Day 10
     public void pattern9(int n)
     {
+        int count=0;
         for(int i=1;i<n;i++)
         {
            for(int j=n-i;j>0;j--)
            {
-               System.out.print("&");
+               System.out.print(" ");
            }
 
            if(i==1)
@@ -280,9 +281,102 @@ public class PatternPrinting {
            if(i>1 && i<n-1)
            {
 
+                    System.out.print("*");
+                    for(int m=0;m<count;m++)
+                    {
+                        System.out.print(" ");
+                    }
+                    System.out.print("*");
+
            }
 
             System.out.println();
+           count+=2;
         }
     }
+
+    //Day11
+    public void pattern10(int n)
+    {
+        int count=0;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(count);
+            }
+            System.out.println();
+            count++;
+        }
+    }
+    //Day12
+
+//                    1
+//                   2 2
+//                  3 3 3
+//                 4 4 4 4
+//                5 5 5 5 5
+
+        public void pattern11(int n)
+        {
+            int count =1;
+            for(int i=1;i<=n;i++)
+            {
+                for(int k=n-i;k>0;k--)
+                {
+                    System.out.print(" ");
+                }
+                for(int j=1;j<=i;j++)
+                {
+                    System.out.print(count+" ");
+                }
+                System.out.println();
+                count++;
+            }
+        }
+
+        //day 13
+
+//                          1
+//                        2 3 2
+//                       3 4 5 4 3
+//                      4 5 6 7 6 5 4
+//                    5 6 7 8 9 8 7 6 5
+
+    public void pattern12(int n)
+    {
+        int count=0;
+        int innercount=2;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=n-i;j>0;j--)
+            {
+                System.out.print(" ");
+            }
+            System.out.print(i+1);
+            for(int k=1;k<i+count;k++)
+            {
+//                System.out.print(" ");
+                if(k<=(i+count)/2)
+                {
+                    innercount++;
+                }else{
+                    innercount--;
+                }
+
+                System.out.print(innercount);
+
+            }
+            if(i>0)
+            {
+                System.out.print(i+1);
+            }
+
+            System.out.println();
+            count++;
+
+        }
+    }
+
+
 }

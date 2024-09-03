@@ -239,6 +239,19 @@ public class P_Array {
         return ans;
     }
 
+    //one plus for very large integer
+    public int[] plusOneLargeInt(int[] array)
+    {
+        int[] ans=new int[array.length+1];
+        if(array[array.length-1]!=9)
+        {
+            ans[array.length]=1;
+            ans[array.length+1]=0;
+        }
+        System.out.println(Arrays.toString(ans));
+        return ans;
+    }
+
     //    Create Target Array in the Given Order
 
 //    Example 1:
