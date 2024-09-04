@@ -378,5 +378,38 @@ public class PatternPrinting {
         }
     }
 
+    //Day 13
+//                        1
+//                       1 1
+//                      1 2 1
+//                     1 3 3 1
+//                    1 4 6 4 1
+
+    public void pattern13(int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=n-i;j>0;j--)
+            {
+                System.out.print(" ");
+            }
+            System.out.print(1);
+            for(int k=0;k<i;k++)
+            {
+                System.out.print("&");
+            }
+            if(i>0)
+            {
+                System.out.print(1);
+            }
+
+            System.out.println( );
+
+
+
+        }
+    }
+
+
 
 }

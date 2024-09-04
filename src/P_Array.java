@@ -239,14 +239,24 @@ public class P_Array {
         return ans;
     }
 
-    //one plus for very large integer
+    //one plus for very large integer  --need to be corrected
     public int[] plusOneLargeInt(int[] array)
     {
-        int[] ans=new int[array.length+1];
-        if(array[array.length-1]!=9)
+        int newLength=array.length;
+        int[] ans=new int[newLength+1];
+
+        for(int i=0;i<newLength-2;i++)
         {
-            ans[array.length]=1;
-            ans[array.length+1]=0;
+            ans[i]=array[i];
+        }
+
+        if(array[array.length-1]==9)
+        {
+            ans[newLength-1]=1;
+            ans[newLength]=0;
+        }
+        else {
+            ans[newLength]=array[array.length-1]+1;
         }
         System.out.println(Arrays.toString(ans));
         return ans;
