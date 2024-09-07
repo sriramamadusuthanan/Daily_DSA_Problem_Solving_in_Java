@@ -378,6 +378,122 @@ public class PatternPrinting {
         }
     }
 
+//    #Day14
+//    Problem statement
+//    Send feedback
+//    Ninja was very fond of patterns. For a given integer ‘N’, he wants to make the N-Star Rotated Triangle.
+//            Example:
+//    Input: ‘N’ = 3
+//
+//    Output:
+//
+//            *
+//            **
+//            ***
+//            **
+//            *
+
+    public void pattern14(int n)
+    {
+        int count=2;
+        for(int i=1;i<2*n-1;i++)
+        {
+            for(int k=0;k<i;k++)
+            {
+                if(i<=n)
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                    for(int j=i-count;j>0;j--)
+                    {
+                        System.out.print("*");
+                    }
+                    count++;
+                    System.out.println();
+                }
+            }
+            System.out.println();
+        }
+    }
+//    #Day15
+//    Problem statement
+//    Send feedback
+//    Aryan and his friends are very fond of the pattern. For a given integer ‘N’, they want to make the N-Binary Number Triangle.
+//    You are required to print the pattern as shown in the examples below.
+//            Example:
+//    Input: ‘N’ = 3
+//
+//    Output:
+//
+//            1
+//            0 1
+//            1 0 1
+
+    public void pattern15(int n)
+    {
+        int count=1;
+        for(int j=0;j<n;j++)
+        {
+            for(int i=0;i<=j;i++)
+            {
+
+                System.out.print(count);
+                if(count==0)
+                {
+                    count=1;
+                }else
+                    count=0;
+            }
+            System.out.println();
+            if(j%2==0)
+            {
+                count=0;
+            }else
+                count=1;
+
+
+        }
+
+
+
+    }
+    //Day 16
+    //Problem: Hollow Square Star Pattern
+    //        n=5
+//            *****
+//            *   *
+//            *   *
+//            *   *
+//            *****
+    public void pattern16(int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            if(i==0||i==n-1)
+            {
+                for(int j=0;j<n;j++)
+                {
+                    System.out.print("*");
+                }
+            }
+
+            else
+            {
+                System.out.print("*");
+                for(int m=1;m<n-1;m++)
+                {
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+
     //Day 13
 //                        1
 //                       1 1
@@ -387,23 +503,26 @@ public class PatternPrinting {
 
     public void pattern13(int n)
     {
+        int num=1;
         for(int i=0;i<n;i++)
         {
             for(int j=n-i;j>0;j--)
             {
-                System.out.print(" ");
+                System.out.print("*");
             }
-            System.out.print(1);
-            for(int k=0;k<i;k++)
+            for(int j=0;j<=i;j++)
             {
-                System.out.print("&");
-            }
-            if(i>0)
-            {
-                System.out.print(1);
-            }
+                if(j==1)
+                {
+                    System.out.print(num);
+                }
 
-            System.out.println( );
+                if(j>1)
+                {
+                    System.out.print("/");
+                }
+            }
+            System.out.println();
 
 
 

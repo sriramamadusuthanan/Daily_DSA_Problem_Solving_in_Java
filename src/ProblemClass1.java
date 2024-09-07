@@ -152,4 +152,34 @@ public class ProblemClass1 {
         }
     }
 
+    //ceiling of a number
+    public void ceilingNo(int[] array, int target)
+    {
+        int start=0;
+        int end=array.length-1;
+        int mid=start+(end-start)/2;
+
+
+       while(end>start)
+       {
+           if(target<array[mid])
+           {
+               start=mid;
+
+           }else
+           {
+               end=mid;
+           }
+           if(target==array[mid])
+           {
+               System.out.println("found");
+                break;
+           }
+
+
+       }
+
+
+    }
+
 }
