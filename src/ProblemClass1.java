@@ -152,34 +152,127 @@ public class ProblemClass1 {
         }
     }
 
+    //evenlyDivides
+    static int evenlyDivides(int N)
+    {
+        int count=0;
+        int original =N;
+        while(N>0)
+        {
+            int digit = N%10;
+            if(digit==0)
+            {
+                N=N/10;
+            }else
+            {
+                if(original%digit==0)
+                {
+                    count++;
+                }
+
+                N=N/10;
+            }
+
+
+
+
+        }
+        System.out.println(count);
+        return count;
+    }
+
+    // Reverse Bits
+    public  long reverseBits(long n) {
+        // Write your code
+        int num= (int)n;
+
+        long result= Long.parseLong(Integer.toBinaryString(num).replace(' ','0'));
+        System.out.println(result);
+        return result;
+    }
+
+
     //ceiling of a number
     public void ceilingNo(int[] array, int target)
     {
         int start=0;
         int end=array.length-1;
-        int mid=start+(end-start)/2;
 
 
-       while(end>start)
+
+       while(start<=end)
        {
+           int mid=start+(end-start)/2;
+
+
            if(target<array[mid])
            {
-               start=mid;
+               end=mid-1;
 
            }else
            {
-               end=mid;
+               start=mid+1;
+
            }
-           if(target==array[mid])
+           if(array[mid]==target)
            {
                System.out.println("found");
-                break;
+               return;
            }
+
 
 
        }
 
 
+       if(array[start]<target)
+       {
+           System.out.println("celing of the no is"+start);
+       }
+       if(target<array[start])
+       {
+           System.out.println("no celing exist");
+       }
+
+
+    }
+
+    //floar of the number
+
+    public void floor(int[] array,int target)
+    {
+        int start=0;
+        int end=array.length-1;
+
+        if(target<array[start])
+        {
+            System.out.println("floor doesn't exist");
+            return;
+        }
+
+        while(start<=end)
+        {
+            int mid= start+(end-start)/2;
+
+            if(target==array[mid])
+            {
+                System.out.println("Floor of the number" + array[mid]);
+                return;
+            }
+            if(target<array[mid])
+            {
+                end=mid-1;
+            }
+            if(target>array[mid])
+            {
+                start=mid+1;
+            }
+
+
+        }
+
+
+        System.out.println("floor of the number "+ array[end]);
     }
 
 }

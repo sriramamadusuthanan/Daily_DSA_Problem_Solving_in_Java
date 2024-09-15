@@ -492,8 +492,104 @@ public class PatternPrinting {
             System.out.println();
         }
     }
+    //Day 17
+//    1    1
+//    12  21
+//    123321
+
+    //n=3
+
+    public void  pattern17(int n)
+    {
+
+        for(int i=1;i<=n;i++)
+        {
+            int count=1;
+            for(int j=0;j<i;j++)
+            {
+                System.out.print(count+ " ");
+                count++;
+            }
+
+            for(int j=0;j<(2*(n-i));j++)
+            {
+                System.out.print(" ");
+
+            }
+            count=count-1;
+            for(int j=0;j<i;j++)
+            {
+                System.out.print(count+ " ");
+                count--;
+            }
+
+            System.out.println();
+
+        }
 
 
+    }
+
+    //Day 18
+
+//    Problem statement
+//    Send feedback
+//    Aryan and his friends are very fond of patterns. For a given integer ‘N’, they want to make the Increasing Letter Triangle.
+//    Example:
+//    Input: ‘N’ = 3
+//
+//    Output:
+//
+//    A
+//    A B
+//    A B C
+
+    public void pattern18(int n)
+    {
+
+
+        for(int i=0;i<n;i++)
+        {
+            char abc = 65;
+            for(int j=0;j<=i;j++)
+            {
+                System.out.print(abc+ " ");
+                abc++;
+            }
+            System.out.println();
+        }
+    }
+    //Day 19
+    public void pattern19(int n)
+    {
+
+
+        for(int i=0;i<n;i++)
+        {
+            char abc = 65;
+            for(int j=n-i;j>0;j--)
+            {
+                System.out.print(abc+ " ");
+                abc++;
+            }
+            System.out.println();
+        }
+    }
+
+    //day20
+//    Output:
+//            *         *
+//            * *     * *
+//            * * * * * *
+//            * *     * *
+//            *         *
+
+    public void pattern20(int n)
+    {
+        
+
+
+    }
     //Day 13
 //                        1
 //                       1 1
@@ -519,7 +615,7 @@ public class PatternPrinting {
 
                 if(j>1)
                 {
-                    System.out.print("/");
+                    System.out.print(" ");
                 }
             }
             System.out.println();
