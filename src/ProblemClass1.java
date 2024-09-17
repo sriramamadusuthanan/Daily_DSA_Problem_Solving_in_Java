@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ProblemClass1 {
 
     //21/08/24
@@ -275,4 +277,149 @@ public class ProblemClass1 {
         System.out.println("floor of the number "+ array[end]);
     }
 
+    //Find Smallest Letter Greater Than Target
+    public char nextGreatestLetter(char[] letters, char target) {
+
+        int start=0;
+        int end= letters.length-1;
+        if(target>=letters[end])
+        {
+
+
+            return letters[0];
+        }
+        int count=1;
+        while(start<=end)
+        {
+            int mid=start+(end-start)/2;
+
+            if(target==letters[mid])
+            {
+                while(target==letters[mid+count])
+                {
+
+                    count++;
+                }
+                System.out.println(letters[mid+count]);
+                return letters[mid+count];
+
+
+
+
+
+            }
+
+            if(target>letters[mid])
+            {
+                start=mid+1;
+            }
+
+            if(target<letters[mid])
+            {
+                end=mid-1;
+            }
+
+
+        }
+
+        System.out.println(letters[start]);
+        return letters[start];
+
+
+    }
+
+    //Find First and Last Position of Element in Sorted Array
+    //brute force
+    public int[] searchRange(int[] nums, int target) {
+
+        int[] array=new int[2];
+
+        if(nums.length==0)
+        {
+            array[0]=-1;
+            array[1]=-1;
+
+        }
+        for(int i=0;i<nums.length;i++)
+        {
+            if(target==nums[i])
+            {
+                array[0]=i;
+                break;
+            }
+            else {
+                array[0]=-1;
+            }
+
+
+            if(target!=nums[i])
+            {
+                array[0]=-1;
+                array[1]=-1;
+            }
+
+        }
+
+        for(int i=nums.length-1;i>=0;i--)
+        {
+
+            if(target==nums[i])
+            {
+                array[1]=i;
+                break;
+            }
+            else {
+                array[1]=-1;
+            }
+
+        }
+        System.out.println(Arrays.toString(array));
+        return array;
+    }
+    //1304. Find N Unique Integers Sum up to Zero
+    public int[] sumZero(int n) {
+
+
+        int[] array= new int[n];
+
+        if(n==1)
+        {
+            array[0]=0;
+        }
+        else if(n%2==0)
+        {
+            int num1=1;
+            int num2=-1;
+            for(int i=0;i<n;i++)
+            {
+                if(i%2==0)
+                {
+                    array[i]=num1;
+                    num1++;
+                }else {
+                    array[i]=num2;
+                    num2--;
+                }
+            }
+        }
+        else {
+            int num1=1;
+            int num2=-1;
+            array[0]=0;
+            for(int i=1;i<n;i++)
+            {
+                if(i%2==0)
+                {
+                    array[i]=num1;
+                    num1++;
+                }else {
+                    array[i]=num2;
+                    num2--;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(array));
+        return array;
+
+    }
 }

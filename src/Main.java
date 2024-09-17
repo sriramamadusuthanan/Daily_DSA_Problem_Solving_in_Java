@@ -10,8 +10,8 @@ public class Main {
 //        pattern.pattern20(5);
 //
         ProblemClass1 problem =  new ProblemClass1();
-        int[] array={2,4,5,6,7,9};
-        problem.floor(array,1);
+        int[] array={1,3};
+        problem.sumZero(5);
 
 
 //        RandomProblem rp= new RandomProblem();
