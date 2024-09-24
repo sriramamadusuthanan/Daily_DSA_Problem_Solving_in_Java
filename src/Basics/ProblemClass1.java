@@ -1,3 +1,5 @@
+package Basics;
+
 import java.util.Arrays;
 
 public class ProblemClass1 {
@@ -376,6 +378,62 @@ public class ProblemClass1 {
         System.out.println(Arrays.toString(array));
         return array;
     }
+    //efficient method
+    public int[] searchRange1(int[] nums, int target) {
+
+        int[] array={-1,-1};
+        array[0]=searchSatart(nums,target,true);
+        array[1]=searchSatart(nums,target,false);
+
+        return array;
+    }
+
+    int searchSatart(int[] nums,int target,boolean found)
+    {
+        int start=0;
+        int end=nums.length-1;
+
+        int ans=-1;
+
+        while(start<=end)
+        {
+            int mid=start+(end-start)/2;
+
+            if(target<nums[mid])
+            {
+                end=mid-1;
+            }else if(target>nums[mid])
+            {
+                start=mid+1;
+            }else
+            {
+                ans=mid;
+                if(found)
+                {
+                    end=mid-1;
+                }
+                else
+                {
+                    start=mid+1;
+                }
+            }
+
+
+
+        }
+        return ans;
+    }
+
+    //without using length method
+    public int[] searchRange2(int[] nums, int target) {
+
+        int[] array={-1,-1};
+
+
+        return array;
+    }
+
+
     //1304. Find N Unique Integers Sum up to Zero
     public int[] sumZero(int n) {
 

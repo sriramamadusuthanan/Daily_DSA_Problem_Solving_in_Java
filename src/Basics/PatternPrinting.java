@@ -1,3 +1,5 @@
+package Basics;
+
 public class PatternPrinting {
 
 
@@ -576,6 +578,28 @@ public class PatternPrinting {
         }
     }
 
+    //day21
+//            4444444
+//            4333334
+//            4322234
+//            4321234
+//            4322234
+//            4333334
+//            4444444
+
+    public void pattern21(int n)
+    {
+        int count=0;
+        for(int i=1;i<2*n;i++)
+        {
+            for(int j=1;j<2*n;j++)
+            {
+
+            }
+            System.out.println();
+        }
+    }
+
     //day20
 //    Output:
 //            *         *
@@ -590,6 +614,8 @@ public class PatternPrinting {
 
 
     }
+
+
     //Day 13
 //                        1
 //                       1 1

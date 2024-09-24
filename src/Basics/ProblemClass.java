@@ -1,6 +1,6 @@
-import java.lang.reflect.Array;
+package Basics;
+
 import java.time.LocalTime;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
