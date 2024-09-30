@@ -1,4 +1,8 @@
 package recursion;
+
+import java.util.Arrays;
+import java.util.Locale;
+
 //space complexity is not constant since it create calls in stacks
 //The recursion formula - the basic formula for the problem when its break down to simpler problem
 //recursion relation is the formula ^
@@ -160,6 +164,20 @@ public class Problem {
         return n*factorial(n-1);
     }
 
+    //reverse a array
+    public  int[] reverse(int[] array, int num)
+    {
+        int last=array[array.length-1-num];
+       array[array.length-1-num]=array[num];
+       array[num]=last;
+       if(num==(array.length-2)/2)
+       {
+           return array;
+       }
+       return reverse(array,num+1);
+
+    }
+
     //Sum triangle from array
 
     //Input : A = {1, 2, 3, 4, 5}
@@ -170,25 +188,112 @@ public class Problem {
     //         [3, 5, 7, 9]
     //         [1, 2, 3, 4, 5]
 
-    public static int[] sumTriFromArray(int[] array,int count,int[]arr)
+    public int[] sumTriFromArray(int[] array)
     {
-
-        arr=new int[array.length-2];
-        if(arr.length==0)
+        //base case
+        if(array.length<2)
         {
-            return arr;
+            return array;
         }
 
-        if(count==arr.length-1)
+        int[] arr=new int[array.length-1];
+
+        for(int i=0;i<array.length-1;i++)
         {
-            count=0;
+            arr[i]=array[i]+array[i+1];
+        }
+
+
+
+        return sumTriFromArray(arr);
+    }
+
+
+    //Input: arr = {1, 4, 3, -5, -4, 8, 6};
+    //Output: min = -5, max = 8
+
+    public void maxAndmin(int[] array, int count)
+    {
+        int max=array[count];
+        int min = array[count];
+        if(count==array.length-1)
+        {
+            System.out.println("max val in arr is "+max);
+            System.out.println("min val in arr is "+min);
+            return;
+        }
+
+        if(max<array[count])
+        {
+            max=array[count];
 
         }
 
-        arr[count]=array[count]+array[count+1];
-        count++;
-        return sumTriFromArray(array,count,arr);
+        if(min>array[count])
+        {
+            min=array[count];
+        }
 
+         maxAndmin(array,count+1);
+
+    }
+
+    //palindrome
+    public boolean isPalindrome(String s,int num) {
+
+        String slower=s.toLowerCase();
+        int last=slower.length()-1-num;
+        if(num>=last)
+        {
+            System.out.println("pal");
+            return true;
+        }
+        int c=slower.charAt(num);
+        while(c<97 || c>122 )
+        {
+            num++;
+            c=slower.charAt(num);
+        }
+        int d=slower.charAt(last);
+        while(d<97 || d>122)
+        {
+            last--;
+            d=slower.charAt(last);
+        }
+        if(slower.charAt(num)!=slower.charAt(last))
+        {
+            return false;
+        }
+
+        return isPalindrome(s,num+1);
+
+    }
+
+
+    public void freqofnum(int arr[], int N, int P) {
+        // do modify in the given array
+        int[] array=new int[N];
+
+        for(int i=1;i<=N;i++)
+        {
+            int freq=0;
+            for(int j=0;j<arr.length;j++)
+            {
+                if(i==arr[j])
+                {
+                    freq++;
+                }
+
+
+            }
+
+            array[i-1]=freq;
+        }
+
+        for(int i=0;i<array.length;i++)
+        {
+            System.out.print(array[i]+" ");
+        }
     }
 
 
