@@ -9,9 +9,9 @@ public static void main(String[] args)
 
     Problem problem=new Problem();
 
-    int[] array= {2, 3, 4, 5, 6,7,8,9,10,11};
+    int[] array= {10,5,10,15,10,5};
 
-    problem.freqofnum(array,5,5);
+    problem.highAndlow(array);
 
     //problem.isPalindrome("A man, a plan, a canal: Panama",0);
 

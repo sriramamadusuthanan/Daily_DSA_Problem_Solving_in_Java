@@ -295,8 +295,55 @@ public class Problem {
             System.out.print(array[i]+" ");
         }
     }
+//#DAY37 "A"
+//Problem Statement: Given an array of size N. Find the highest and lowest frequency element.
+//    nput: array[] = {10,5,10,15,10,5};
+//    Output: 10 15
 
+    public void highAndlow(int[] array)
+    {
+        int count=0;
+        int max=0;
+        int num1=0;
+        //for min
+        int count2=0;
+        int min=0;
+        int num2=0;
+        for(int i=0;i<array.length;i++)
+        {
+            for(int j=i+1;j<array.length;j++)
+            {
+                if(array[i]==array[j])
+                {
+                    count++;
+                }
 
+            }
+
+            if(count<max)
+            {
+                num1=i;
+            }
+        }
+
+        for(int i=0;i<array.length;i++)
+        {
+            for(int j=i+1;j<array.length;j++)
+            {
+                if(array[i]==array[j])
+                {
+                   count2++;
+                }
+
+            }
+
+            if(count2>=min)
+            {
+                num2=i;
+            }
+        }
+        System.out.println(array[num1]+" "+ array[num2]);
+    }
 
 
 }

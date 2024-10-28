@@ -518,6 +518,146 @@ public class Problem {
     // Find in Mountain Array
 
 
+    //1.find the peak element index
+    //2.simple binary search in first half
+    //3. if not found search in 2nd half decending array
+
+    public int findMountainArray(int[] array, int target)
+    {
+       int peak= peakInMountainArray(array);
+
+       int first=binaryS(array,target,peak);
+
+       if(first!=-1)
+       {
+         return first;
+       }else {
+           binaryD(array,target,peak);
+       }
+
+       return -1;
+    }
+
+    static int peakInMountainArray(int[] array)
+    {
+        int start=0;
+        int end=array.length-1;
+
+        while(start<end)
+        {
+            int mid=start+(end-start)/2;
+
+            if(array[mid]<array[mid+1])
+            {
+                start=mid+1;
+            }else {
+                end=mid;
+            }
+        }
+
+        return start;
+    }
+
+    static int binaryS(int[] array,int target,int last)
+    {
+
+        int start=0;
+        int end=last;
+        //System.out.println(end);
+        while(start<=end)
+        {
+            int mid=start+(end-start)/2;
+            if(array[mid]==target)
+            {
+                System.out.println(mid);
+                return mid;
+            }
+            if(array[mid]<target)
+            {
+                start=mid+1;
+            }else {
+                end=mid-1;
+            }
+        }
+
+        //return binaryD(array,target);
+
+        return -1;
+
+    }
 
 
+
+
+    static  int  binaryD(int[] array, int target,int least)
+    {
+        int start=least;
+        int end=array.length-1;
+        while(start<=end)
+        {
+           int mid=start+(end-start)/2;
+
+           if(array[mid]==target)
+           {
+               return mid;
+           }
+
+           if(array[mid]>target)
+           {
+               start=mid+1;
+           }
+           else
+           {
+               end=mid-1;
+           }
+        }
+        return -1;
+    }
+
+
+
+    //33. Search in Rotated Sorted Array
+
+    public int search(int[] nums, int target) {
+
+        int peakelement=findPeakElement(nums);
+
+        int firstresult=binaryS(nums,target,peakelement);
+
+        if(firstresult!=-1)
+        {
+            return firstresult;
+        }
+
+
+        return  binaryS2(nums,target,peakelement);
+    }
+
+    static int binaryS2(int[] array,int target,int peak)
+    {
+        int start1=peak+1;
+        int end1=array.length-1;
+
+        while(start1<=end1)
+        {
+            int mid=start1+(end1-start1)/2;
+            if(array[mid]==target)
+            {
+                System.out.println(mid);
+                return mid;
+            }
+            if(array[mid]<target)
+            {
+                start1=mid+1;
+            }else {
+                end1=mid-1;
+            }
+        }
+
+        //return binaryD(array,target);
+
+        return -1;
+
+
+    }
 }
