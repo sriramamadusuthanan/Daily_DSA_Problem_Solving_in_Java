@@ -9,7 +9,7 @@ public class Problem {
     {
         if(arr.length==0 )
         {
-            System.out.println("Empty Array");
+            System.out.println("Empty Array.Array");
             return;
         }
 
@@ -32,7 +32,7 @@ public class Problem {
     {
         if(arr.length==0 )
         {
-            System.out.println("Empty Array");
+            System.out.println("Empty Array.Array");
             return;
         }
 
@@ -55,7 +55,7 @@ public class Problem {
     {
         if(array.length==0)
         {
-            System.out.println("Empty Array");
+            System.out.println("Empty Array.Array");
             return;
         }
 
@@ -307,7 +307,7 @@ public class Problem {
 
     }
 
-    //Find First and Last Position of Element in Sorted Array
+    //Find First and Last Position of Element in Sorted Array.Array
     //brute force
     public int[] searchRange(int[] nums, int target) {
 
@@ -515,7 +515,7 @@ public class Problem {
         return start;
     }
 
-    // Find in Mountain Array
+    // Find in Mountain Array.Array
 
 
     //1.find the peak element index
@@ -616,7 +616,7 @@ public class Problem {
 
 
 
-    //33. Search in Rotated Sorted Array
+    //33. Search in Rotated Sorted Array.Array
 
     public int search(int[] nums, int target) {
 

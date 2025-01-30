@@ -53,4 +53,7 @@ public class basics {
            reverselist.add(list.get(i));
         }
     }
+
+
+
 }

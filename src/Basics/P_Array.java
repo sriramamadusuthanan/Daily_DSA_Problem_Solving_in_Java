@@ -5,15 +5,15 @@ import java.util.Arrays;
 public class P_Array {
 
 //    Easy
-//    Build Array from Permutation
-//    Concatenation of Array
-//    Running Sum of 1d Array
+//    Build Array.Array from Permutation
+//    Concatenation of Array.Array
+//    Running Sum of 1d Array.Array
 //    Richest Customer Wealth
-//    Shuffle the Array
+//    Shuffle the Array.Array
 //    Kids With the Greatest Number of Candies
 //    Number of Good Pairs
 //    How Many Numbers Are Smaller Than the Current Number
-//    Create Target Array in the Given Order
+//    Create Target Array.Array in the Given Order
 //    e Sentence Is PangrCheck if tham
 //    Count Items Matching a Rule
 //    Find the Highest Altitude
@@ -22,7 +22,7 @@ public class P_Array {
 //    Matrix Diagonal Sum
 //    Find Numbers with Even Number of Digits
 //    Transpose Matrix
-//    Add to Array-Form of Integer
+//    Add to Array.Array-Form of Integer
 //    Maximum Population Year
 //    Determine Whether Matrix Can Be Obtained By Rotation
 //    Two Sum
@@ -31,10 +31,10 @@ public class P_Array {
 //    Maximum Subarray
 //    Reshape the Matrix
 //    Plus One
-//    Remove Duplicates from Sorted Array
+//    Remove Duplicates from Sorted Array.Array
 //    Minimum Cost to Move Chips to The Same Position
 
-//    1. Build Array from Permutation
+//    1. Build Array.Array from Permutation
     public int[] permutation(int[] array)
     {
         int[] ans = new int[array.length];
@@ -46,7 +46,7 @@ public class P_Array {
 
         return ans;
     }
-    //    Concatenation of Array
+    //    Concatenation of Array.Array
     public int[] concatenation(int[] array)
     {
         int[] ans=new int[array.length*2];
@@ -60,7 +60,7 @@ public class P_Array {
         return ans;
     }
 
-    //    Running Sum of 1d Array
+    //    Running Sum of 1d Array.Array
     //Input: nums = [1,2,3,4]
     //Output: [1,3,6,10]
     public int[] runningSumArray(int[] array)
@@ -75,7 +75,7 @@ public class P_Array {
         return ans;
     }
 
-    //    Shuffle the Array --to be solved..
+    //    Shuffle the Array.Array --to be solved..
 //    Example 1:
 //
 //    Input: nums = [2,5,1,3,4,7], n = 3
@@ -184,7 +184,7 @@ public class P_Array {
         System.out.println(Arrays.toString(ans));
         return ans;
     }
-    // Remove Duplicates from Sorted Array
+    // Remove Duplicates from Sorted Array.Array
 //    Input: nums = [1,1,2]
 //    Output: 2, nums = [1,2,_]
     public int[] removeDuplicates(int[] nums) {
@@ -263,7 +263,7 @@ public class P_Array {
         return ans;
     }
 
-    //    Create Target Array in the Given Order
+    //    Create Target Array.Array in the Given Order
 
 //    Example 1:
 //

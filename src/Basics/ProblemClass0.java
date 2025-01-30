@@ -118,7 +118,7 @@ public class ProblemClass0 {
 
         arrayName = new int[5];  // Initialization - memory for 5 integers is allocated on the heap
 
-        //2d Array
+        //2d Array.Array
         int[][] Array2D=new int[3][3];  //row range is need and col is optional
 
         Scanner sc = new Scanner(System.in);
@@ -170,7 +170,7 @@ public class ProblemClass0 {
     {
         if(arr==null || arr.length==0)
         {
-            System.out.println("Array is emplty");
+            System.out.println("Array.Array is emplty");
             return;
         }
         int max=arr[0];
@@ -184,7 +184,7 @@ public class ProblemClass0 {
         System.out.println(max);
     }
 
-    //reverse a Array
+    //reverse a Array.Array
     public void reverseArray(int[] arr)
     {
         int first=0;
@@ -208,7 +208,7 @@ public class ProblemClass0 {
     {
         if(arr.length==0 )
         {
-            System.out.println("Empty Array");
+            System.out.println("Empty Array.Array");
             return;
         }
 
@@ -231,7 +231,7 @@ public class ProblemClass0 {
     {
         if(arr.length==0 )
         {
-            System.out.println("Empty Array");
+            System.out.println("Empty Array.Array");
             return;
         }
 
@@ -254,7 +254,7 @@ public class ProblemClass0 {
     {
         if(array.length==0)
         {
-            System.out.println("Empty Array");
+            System.out.println("Empty Array.Array");
             return;
         }
 

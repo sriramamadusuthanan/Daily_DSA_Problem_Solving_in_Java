@@ -330,7 +330,7 @@ public class ProblemClass1 {
 
     }
 
-    //Find First and Last Position of Element in Sorted Array
+    //Find First and Last Position of Element in Sorted Array.Array
     //brute force
     public int[] searchRange(int[] nums, int target) {
 
