@@ -42,3 +42,37 @@ my solution
     }
     return new int[] {-1,-1};
     }
+..............
+29 
+14. Longest Common Prefix
+ Example 1:
+
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
+ public String longestCommonPrefix(String[] strs) {
+        String str=strs[0];
+        for(int i=1;i<strs.length;i++)
+        {
+            if(str.length()>strs[i].length())
+            {
+                str=str.substring(0,strs[i].length());
+            }
+
+            for(int j=0;j<str.length();j++)
+            {
+                if(str.charAt(j)==strs[i].charAt(j))
+                {
+                    continue;
+                }else
+                {
+                    if(j==0)
+                    {
+                        return "";
+                    }
+                    str=str.substring(0,j);  // str.substring(index, ending index) its just cuts in the index , its leave that ending index
+                }
+            }
+        }
+        return str;
+        
+    }
