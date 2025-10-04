@@ -76,3 +76,28 @@ Output: "fl"
         return str;
         
     }
+
+04/oct
+ 26. Remove Duplicates from Sorted Array
+Example 1:
+
+Input: nums = [1,1,2]
+Output: 2, nums = [1,2,_]
+Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+
+     public int removeDuplicates(int[] nums) {
+        Set<Integer> set = new TreeSet<>();
+
+        for(int i=0;i<nums.length;i++)
+        {
+            set.add(nums[i]);
+        }
+        int i=0;
+        for(int j: set)
+        {
+            nums[i]=j;
+            i++; 
+        }
+        return set.size();
+    }
